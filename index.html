@@ -237,6 +237,11 @@
             }
 
             /* Decision name on hover or keyboard focus */
+            .dot:hover,
+            .dot:focus-visible {
+                z-index: 1;
+            }
+
             .dot::after {
                 content: attr(data-title);
                 position: absolute;
