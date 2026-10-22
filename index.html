@@ -6,7 +6,7 @@
         <title>DSC 106 Project 2: Persuasive or Deceptive Visualization?</title>
         <meta
             name="description"
-            content="One World Bank dataset, two charts: one argues China is beating the U.S. in the tech race, one argues it isn't, with every design decision scored from deceptive to earnest."
+            content="One World Bank dataset, four charts: two argue China is beating the U.S. in the tech race, two argue it isn't, with design decisions scored from deceptive to earnest."
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -559,8 +559,8 @@
             <p class="course">DSC 106 Project 2: Persuasive or deceptive visualization?</p>
             <h1><span class="hang">“</span>China is beating the U.S. in the tech race.”</h1>
             <p class="deck">
-                One dataset, two charts. The first argues this proposition is true; the second argues it is
-                false. Under each chart we score every design decision we made to persuade you, from fully
+                One dataset, two perspectives. C1 and C2 argue this proposition is true; U1 and U2 argue it is
+                false. Under the charts we score the design decisions we made to persuade you, from fully
                 deceptive to fully earnest.
             </p>
             <ul class="team">
@@ -576,8 +576,8 @@
                 Each dot is one decision, numbered as in the lists below. Select a dot to jump to it.
             </p>
             <ul class="key">
-                <li class="side-for">For the proposition (Figure 1)</li>
-                <li class="side-against">Against the proposition (Figure 2)</li>
+                <li class="side-for">For the proposition (C1 and C2)</li>
+                <li class="side-against">Against the proposition (U1 and U2)</li>
             </ul>
             <div class="axis">
                 <ol class="axis-dots" aria-label="Design decisions placed by score"></ol>
@@ -593,86 +593,198 @@
                     <span>Fully earnest</span>
                 </div>
             </div>
-            <p class="axis-note" hidden>Figure 1's decisions will appear here once they're added.</p>
+            <p class="axis-note" hidden>C1 and C2's decisions will appear here once they're added.</p>
         </section>
 
         <section class="side side-for wrap" data-side="for" aria-labelledby="for-title">
             <h2 id="for-title">For the proposition</h2>
-            <p class="lede">Figure 1 argues that China is pulling ahead.</p>
+            <p class="lede">C1 and C2 argue that China is pulling ahead in growth and global share.</p>
 
-            <figure>
-                <!-- S2 owner: replace this file with the updated chart, keeping the same file name -->
+            <figure id="c1">
                 <img
-                    src="S2_growth_rates.png"
+                    src="C1_growth_rates.png"
                     width="1600"
                     height="1120"
                     alt="Grouped bar chart titled 'China is outgrowing America on every measure of innovation': average annual growth rates since 2000 for China and the U.S. across patents, research papers, R&amp;D spending, high-tech exports and IP royalties. China's bar is taller in every category."
                 />
                 <figcaption>
-                    <span class="todo-inline">[S2 owner: brief caption, covering the data, years and source.]</span>
+                    C1. Average annual growth rates for China and the U.S. across five innovation indicators
+                    since 2000; high-tech exports begin in 2007, the first available year. Source: World Bank
+                    World Development Indicators.
                 </figcaption>
             </figure>
 
-            <h3>Design decisions</h3>
+            <h3>Design decisions for C1</h3>
+            <ol class="decisions" data-chart="C1" aria-label="C1 design decisions">
+                <li class="decision">
+                    <p class="score">−1.5</p>
+                    <h4>Showing growth rates instead of totals</h4>
+                    <p>
+                        We compared how quickly each country grew rather than how much it produced. This
+                        puts China ahead in all five categories and makes its progress look convincing.
+                        However, a country starting with a small amount can have a high growth rate while
+                        still trailing in total output. We considered showing totals beside the growth
+                        rates, but chose growth alone because it highlights China's progress and draws less
+                        attention to the gaps that remain.
+                    </p>
+                </li>
+                <li class="decision">
+                    <p class="score">−1</p>
+                    <h4>Turning IP royalties into a strength for China</h4>
+                    <p>
+                        IP royalties are payments for using intellectual property, such as patents or
+                        software. China's 26% growth rate creates the tallest bar, making this category look
+                        like strong evidence for China. Yet the U.S. earned about $114 billion in 2020
+                        compared with China's $8.6 billion, roughly 13 times as much. We considered adding
+                        those dollar totals, but kept the growth comparison because it supports our
+                        argument. This makes China's progress clear while hiding how far it still trails in
+                        earnings.
+                    </p>
+                </li>
+                <li class="decision">
+                    <p class="score">+1.5</p>
+                    <h4>Building trust with clear labels and a source</h4>
+                    <p>
+                        A zero-based axis, labels on every bar, and a World Bank source make the chart easy
+                        to read and check. These are honest design choices that help readers trust the
+                        numbers. However, an accurate chart can still give an incomplete picture when it
+                        only shows growth rates. We considered removing labels for a cleaner look, but kept
+                        them because they make the comparison easier to follow and give our argument more
+                        credibility.
+                    </p>
+                </li>
+                <li class="decision">
+                    <p class="score">−0.5</p>
+                    <h4>Using different time periods</h4>
+                    <p>
+                        Most indicators begin in 2000, while high-tech exports begin in 2007. Including
+                        exports adds another category where China leads in growth, but the shared subtitle
+                        can make readers assume all bars cover the same years. The footnote explains the
+                        exception, though it is easy to overlook. We considered starting every indicator in
+                        2007, but kept the longer records where available. That preserves more data,
+                        although the different periods make the comparisons less consistent.
+                    </p>
+                </li>
+                <li class="decision">
+                    <p class="score">−1.5</p>
+                    <h4>Combining a broad title with bold Chinese labels</h4>
+                    <p>
+                        The title says “every measure of innovation,” which turns five selected indicators
+                        into a claim about the entire tech race. Bold labels on China's bars also draw
+                        attention to its larger growth rates first. These choices create a clear takeaway,
+                        but the title goes beyond what five measures can prove. We considered “China grew
+                        faster on five selected indicators” with equal-weight labels. We chose the stronger
+                        title and bold Chinese values because they make the lead feel more complete.
+                    </p>
+                </li>
+            </ol>
 
-            <!--
-                S2 owner: replace the yellow box below with your 3-5 decisions in this format.
-                Numbers, colors and the dots in the overview are added automatically.
+            <figure id="c2">
+                <img
+                    src="C2_world_share.png"
+                    width="1600"
+                    height="1120"
+                    alt="Grouped horizontal bar chart of shares of global totals in 2018. China accounts for 61% of patent applications, 25% of high-tech exports and 21% of research papers; the U.S. accounts for 12%, 5% and 17%, respectively."
+                />
+                <figcaption>
+                    C2. China and U.S. shares of global patent applications, high-tech exports and research
+                    papers in 2018, identified in the chart as the latest year with complete world data.
+                    Source: World Bank World Development Indicators.
+                </figcaption>
+            </figure>
 
-                <ol class="decisions">
-                    <li class="decision">
-                        <p class="score">−1</p>
-                        <h4>Decision name</h4>
-                        <p>Why it persuades, what worked or didn't, and what alternatives you considered.</p>
-                    </li>
-                </ol>
-
-                Scores go from −2 (fully deceptive) to +2 (fully earnest) in 0.5 steps; avoid 0.
-            -->
-            <div class="todo">
-                <p><strong>To fill in (S2 owner)</strong></p>
-                <ul>
-                    <li>
-                        Replace <code>S2_growth_rates.png</code> with the updated chart: add x- and y-axis titles
-                        and one or two annotations that point out what readers should notice, per the TA's
-                        feedback. Export it at least 2400 px wide so it stays sharp.
-                    </li>
-                    <li>Write the figure caption above.</li>
-                    <li>
-                        List 3–5 design decisions, each with a score from −2 (fully deceptive) to +2 (fully
-                        earnest) in 0.5 steps, avoiding 0, and a couple of sentences: why it persuades, what
-                        worked or didn't, and what alternatives you considered.
-                    </li>
-                </ul>
-            </div>
+            <h3>Design decisions for C2</h3>
+            <ol class="decisions" data-chart="C2" aria-label="C2 design decisions">
+                <li class="decision">
+                    <p class="score">−1</p>
+                    <h4>Comparing shares of the world total</h4>
+                    <p>
+                        Showing each country's share of the world total makes China's larger output look
+                        like evidence of global leadership. Percentages also make the three comparisons easy
+                        to read together. However, larger totals can partly reflect a country's size rather
+                        than how much it produces per person. We considered comparisons per person or
+                        research spending relative to the size of each economy. We chose world shares
+                        because they emphasize China's role in worldwide production.
+                    </p>
+                </li>
+                <li class="decision">
+                    <p class="score">−1</p>
+                    <h4>Choosing a favorable year</h4>
+                    <p>
+                        We chose 2018, China's peak year for patent applications in this dataset. The
+                        subtitle gives another reason: it is the latest year with complete world data. A
+                        common year makes the comparisons consistent, but that explanation leaves out how
+                        favorable the year is for China. We considered showing trends across several years.
+                        We kept 2018 for its complete coverage and strong pro-China comparison, although a
+                        single year cannot show whether the lead is lasting.
+                    </p>
+                </li>
+                <li class="decision">
+                    <p class="score">−1.5</p>
+                    <h4>Leaving out measures where the U.S. leads</h4>
+                    <p>
+                        Patents, high-tech exports and research papers all show China ahead, so each
+                        comparison reinforces the same message. We left out IP royalties and researchers per
+                        million people, where the U.S. leads. This keeps the chart focused, but makes
+                        China's advantage look more widespread than a broader comparison would suggest. We
+                        considered including those U.S. strengths, but kept the selected three because
+                        counterexamples would weaken our argument that China is winning the tech race.
+                    </p>
+                </li>
+                <li class="decision">
+                    <p class="score">−0.5</p>
+                    <h4>Putting the largest gap first</h4>
+                    <p>
+                        Patent applications appear first, with China at 61% of the world total and the U.S.
+                        at 12%. That large opening gap shapes the reader's first impression before the
+                        closer research-paper comparison at 21% versus 17%. The order makes China's lead
+                        feel decisive, although the labels still show that its advantage varies. We
+                        considered alphabetical order or starting with research papers, but chose patents
+                        first because the largest gap gives our argument the strongest opening.
+                    </p>
+                </li>
+                <li class="decision">
+                    <p class="score">−1.5</p>
+                    <h4>Treating higher quantity as technological leadership</h4>
+                    <p>
+                        The title describes a larger share of “the world's technology,” but patent and paper
+                        counts do not tell us how useful the inventions or research are. Export value also
+                        does not show where the technology was invented. The bars show the chosen amounts
+                        clearly, yet the title encourages a broader conclusion. We considered measures of
+                        research impact, such as how often other studies cite a paper, or a title naming
+                        only the three indicators. We kept the broad title because it makes larger
+                        quantities sound like overall technological leadership.
+                    </p>
+                </li>
+            </ol>
         </section>
 
         <section class="side side-against wrap" data-side="against" aria-labelledby="against-title">
             <h2 id="against-title">Against the proposition</h2>
-            <p class="lede">Figure 2 argues that the U.S. still leads.</p>
+            <p class="lede">U1 and U2 argue that the U.S. still leads in IP income and research intensity.</p>
 
-            <figure>
+            <figure id="u1">
                 <img
                     src="U1_IP_Income.png"
-                    width="2400"
-                    height="1680"
+                    width="1600"
+                    height="1120"
                     alt="Line chart of IP income received from abroad, 2000 to 2020. The U.S. line rises from $43B to $114B while China's stays near zero and ends at $8.6B. The shaded gap between the lines is labeled as a $43B lead in 2000 and a $105B lead in 2020."
                 />
                 <figcaption>
-                    IP income received from abroad (charges for the use of intellectual property, receipts; BoP,
+                    U1. IP income received from abroad (charges for the use of intellectual property, receipts; BoP,
                     current US$), United States and China, 2000–2020. The shaded area is the calculated U.S. lead
                     (U.S. minus China). Source: World Bank World Development Indicators, September 2021 snapshot.
                 </figcaption>
             </figure>
 
-            <h3>Design decisions</h3>
+            <h3>Design decisions for U1</h3>
 
             <ol class="decisions">
                 <li class="decision">
                     <p class="score">−1</p>
                     <h4>Picking IP income as the battleground</h4>
                     <p>
-                        Charges for the use of intellectual property give the U.S. a 13× lead, and Figure 1 uses
+                        Charges for the use of intellectual property give the U.S. a 13× lead, and C1 uses
                         the same series, so this chart reads as a direct rebuttal. The catch is that the indicator
                         bundles patents with copyrights (film, music, software), trademarks and franchise fees, so
                         the U.S. lead is not purely technological. We considered resident patent applications and
@@ -716,7 +828,7 @@
                         to $105.5B is a 2.4× increase) in neutral wording, with no “dominates” or “crushes,” so it
                         reads like reporting rather than advocacy. But it relies on current dollars: U.S. consumer
                         prices rose about 50% from 2000 to 2020, so in real terms the lead grew by roughly 60%, not
-                        “more than doubled.” The y-axis title does say “current US$,” which keeps the chart
+                        “more than doubled.” The subtitle does say “current US$,” which keeps the chart
                         technically accurate while counting on readers not to do the inflation math. Our earlier
                         title, “America earns 13 times China's IP income,” was more defensible but invited the
                         question of how fast that multiple is falling.
@@ -727,16 +839,40 @@
                     <p class="score">+1.5</p>
                     <h4>Earnest scaffolding: labels, definitions, source</h4>
                     <p>
-                        End-of-line labels ($114B, $8.6B) replace a legend, both axes are titled, the subtitle
+                        End-of-line labels ($114B, $8.6B) replace a legend, the subtitle
                         defines the measure in plain words, and the World Bank source and snapshot date are cited.
-                        Two annotations give readers concrete takeaways: the U.S. earns 13× China, and China's 2020
-                        income is about a fifth of what the U.S. earned in 2000 (in nominal dollars, which if
-                        anything understates the gap). These choices are genuinely earnest and make the chart quick
-                        to read, but they also lend credibility to the framing choices above. Matching Figure 1's
-                        colors and typography lets the two charts be read side by side.
+                        The $43B and $105B lead annotations and the 13× comparison give readers concrete takeaways.
+                        These choices are earnest and make the chart quick
+                        to read, but they also lend credibility to the framing choices above. Matching C1's
+                        colors and typography lets the charts be read side by side.
                     </p>
                 </li>
             </ol>
+
+            <figure id="u2">
+                <img
+                    src="U2_Research_Intensity.png"
+                    width="1600"
+                    height="1120"
+                    alt="Two horizontal bar charts compare research intensity in 2017. The U.S. has 4,412 researchers per million people versus China's 1,225, a 3.6-fold difference. U.S. R&amp;D expenditure is 2.82% of GDP versus China's 2.15%, a 1.3-fold difference."
+                />
+                <figcaption>
+                    U2. Researchers in R&amp;D per million people and R&amp;D expenditure as a share of GDP in 2017,
+                    identified in the chart as the latest year with both measures for both countries.
+                    Source: World Bank World Development Indicators, September 2021 snapshot.
+                </figcaption>
+            </figure>
+
+            <h3>Design decisions for U2</h3>
+            <!-- U2 owner: use the same .decisions and .decision markup as U1 above. -->
+            <div class="todo">
+                <p><strong>To fill in (U2)</strong></p>
+                <p>
+                    List 3–5 design decisions, each with a score from −2 (fully deceptive) to +2 (fully earnest)
+                    and a couple of sentences explaining why it persuades, what worked or didn't, and what
+                    alternatives you considered.
+                </p>
+            </div>
         </section>
 
         <section class="prose wrap" aria-labelledby="reflection-title">
@@ -786,7 +922,8 @@
                         if (Number.isNaN(score)) return;
 
                         const n = index + 1;
-                        const title = heading.textContent.trim();
+                        const chart = item.closest(".decisions").dataset.chart;
+                        const title = (chart ? `${chart}: ` : "") + heading.textContent.trim();
                         item.id ||= `${key}-${n}`;
                         item.style.setProperty("--x", (score + 2) / 4);
                         scoreEl.innerHTML =
